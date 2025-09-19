@@ -6,12 +6,11 @@ def on_press(key):
     except AttributeError:
         print(f"Special key pressed: {key}")
 
-    # Optional: stop when ESC is pressed
     if key == Key.esc:
         print("ESC pressed. Exiting...")
         return False  # This stops the listener
 
-print("✅ Keylogger started. Press keys (type in this terminal window). Press ESC to stop.\n")
+print("Keylogger started. Press keys (type in this terminal window). Press ESC to stop.\n")
 
 with Listener(on_press=on_press) as listener:
     listener.join()
